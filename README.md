@@ -2,6 +2,8 @@
 
 Local-first review tooling for short-form video storyboards. Write a structured Markdown table, generate an interactive browser review page, then package the page and media into a portable macOS handoff app.
 
+[Live site](https://leonartksmao-tech.github.io/short-video-storyboard-reviewer/) · [GitHub repository](https://github.com/leonartksmao-tech/short-video-storyboard-reviewer)
+
 ![Short Video Storyboard Reviewer preview](docs/assets/readme-preview.svg)
 
 ## Why This Exists

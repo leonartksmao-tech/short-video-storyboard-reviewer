@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Short Video Storyboard Reviewer</title>
+  <meta name="description" content="Local-first review tooling for short-form video storyboards.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: #dbe3ef;
+      --panel: #ffffff;
+      --soft: #f8fafc;
+      --blue: #2563eb;
+      --green: #059669;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #eef4ff 0%, #ffffff 42%, #f8fafc 100%);
+      line-height: 1.55;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 56px 0 44px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+      gap: 42px;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(44px, 7vw, 76px);
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 24px 0 0;
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 680px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      font-weight: 700;
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .preview {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 24px 80px rgba(15, 23, 42, 0.18);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      background: #fff;
+    }
+
+    section { padding: 34px 0; }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 30px;
+      letter-spacing: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+    }
+
+    .card strong { display: block; margin-bottom: 8px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    pre {
+      overflow-x: auto;
+      padding: 18px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #111827;
+      color: #e5e7eb;
+    }
+
+    footer {
+      padding: 42px 0 60px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      header { align-items: flex-start; flex-direction: column; }
+      .hero { grid-template-columns: 1fr; padding-top: 32px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand">Short Video Storyboard Reviewer</div>
+    <nav aria-label="Project links">
+      <a href="https://github.com/leonartksmao-tech/short-video-storyboard-reviewer">GitHub</a>
+      <a href="README.md">README</a>
+      <a href="examples/storyboard_sample.md">Example</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div>
+        <h1>Review short-video storyboards locally.</h1>
+        <p class="lead">Turn a Markdown storyboard into an interactive review page with scene previews, edit notes, sound cues, effect notes, asset matching, and a pinned timeline.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/leonartksmao-tech/short-video-storyboard-reviewer">View on GitHub</a>
+          <a class="button" href="examples/storyboard_sample.md">Open Sample Markdown</a>
+        </div>
+      </div>
+      <img class="preview" src="docs/assets/readme-preview.svg" alt="Preview of the storyboard review interface">
+    </section>
+
+    <section class="wrap">
+      <h2>What it creates</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>Interactive HTML review</strong>
+          <p>Scene cards, editable notes, media previews, review states, and timeline controls in one local browser page.</p>
+        </div>
+        <div class="card">
+          <strong>Editor-ready exports</strong>
+          <p>Review report, subtitles, asset checklist, and timeline JSON generated from the same storyboard table.</p>
+        </div>
+        <div class="card">
+          <strong>macOS handoff package</strong>
+          <p>Package the review page and media into a standalone app for another Mac or a local network review session.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>Quick start</h2>
+      <pre><code>python3 video_md_tool.py examples/storyboard_sample.md --out examples/c451_tool_output
+open examples/c451_tool_output/storyboard_preview.html</code></pre>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    MIT licensed. Local-first by design: no account, no upload, no cloud service.
+  </footer>
+</body>
+</html>
