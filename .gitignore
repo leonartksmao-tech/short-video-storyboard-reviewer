@@ -1,0 +1,38 @@
+.DS_Store
+.short_video_review/
+
+# Private project workspaces, generated review output, and handoff bundles.
+0527_work/
+**/c451_tool_output/
+C451_另一台Mac交接包/
+C451_另一台Mac交接包.zip
+C451_独立审片交接包/
+C451_独立审片交接包.zip
+短视频审片交接包/
+短视频审片交接包.zip
+short-video-storyboard-reviewer/
+short-video-storyboard-reviewer-public.zip
+
+# Local/private planning notes.
+docs/superpowers/
+短视频交付偏好.md
+
+# Large or private media should stay out of the public repo.
+*.mp4
+*.mov
+*.m4v
+*.webm
+*.wav
+*.m4a
+*.mp3
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+*.zip
+*.filter
+*.ass
+
+# Local one-off generation scripts.
+generate_clone_voice.py
